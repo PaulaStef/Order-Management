@@ -1,0 +1,26 @@
+CREATE SCHEMA IF NOT EXISTS management;
+
+CREATE TABLE `client` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `address` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+
+CREATE TABLE `order` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `orderQuantity` int DEFAULT NULL,
+  `timestamp` timestamp NULL DEFAULT NULL,
+  `nameClient` varchar(45) DEFAULT NULL,
+  `product` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+
+CREATE TABLE `product` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `type` varchar(45) DEFAULT NULL,
+  `quantity` int DEFAULT NULL,
+  `price` float DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) 
